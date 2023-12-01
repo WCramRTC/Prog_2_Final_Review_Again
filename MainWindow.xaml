@@ -1,0 +1,49 @@
+﻿<Window x:Class="Prog_2_Final_Review_Again.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prog_2_Final_Review_Again"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox
+            x:Name="lbDisplay"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Margin="35,77,465,157" />
+        
+        
+        <ListView
+            x:Name="listViewDisplay"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Margin="400,40,59,97">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Wrapping"
+                        DisplayMemberBinding="{Binding Giftwrap}"
+                        />
+                    <GridViewColumn
+                        Header="Bow"
+                        DisplayMemberBinding="{Binding Bow}" />
+                    <GridViewColumn
+                        Header="Shape"
+                        DisplayMemberBinding="{Binding Shape}" />
+                    <GridViewColumn
+                        Header="Package"
+                        DisplayMemberBinding="{Binding Package}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        
+        <ComboBox
+            x:Name="cbDisplay"
+            HorizontalAlignment="Left"
+            Margin="35,24,0,0"
+            VerticalAlignment="Top"
+            Width="300" />
+
+    </Grid>
+</Window>
